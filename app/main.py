@@ -1,8 +1,8 @@
-import logging
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s",
-)
-
-log = logging.getLogger(__name__)re information about pizza
+import pandas as pd
+print ("done")
+# read csv
+df = pd.read_csv("./input/sol-dataset.csv")
+print(df.shape)
+print(df.describe())
+sum_df = df.describe()
+sum_df.to_csv('./output/sum_df.csv')
